@@ -1,0 +1,23 @@
+%h2 Create New Listing
+
+= form_tag "new", :method => :post do
+
+  = label :listing, :thumbnail, 'Add picture'
+  = file_field :listing, :thumbnail
+  
+  = label :listing, :title, 'Title'
+  = text_field :listing, :title
+  
+  = label :listing, :isbn, 'ISBN'
+  = text_field :listing, :isbn
+  
+  = label :listing, :description, 'Description'
+  = text_field :listing, :description
+  
+  = label :listing, :price, 'Price'
+  = number_field :listing, :price
+ 
+  = label :listing, :is_hardcover, 'Hardcover'
+  = select :listing, :is_hardcover, ['true','false']
+ 
+  = submit_tag 'Add Listing'

@@ -46,3 +46,5 @@ group :development do
 end
 
 gem 'haml'
+
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
