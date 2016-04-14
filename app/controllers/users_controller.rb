@@ -11,9 +11,9 @@ class UsersController < ApplicationController
   @user = User.find(params[:id])
   end
   
-  def create
-    @user = User.create!(user_param)
-  end
+  # def create
+  #   @user = User.create!(user_param)
+  # end
     
   def edit
     @user = User.find params[:id]  
