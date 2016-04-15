@@ -4,6 +4,7 @@
 %table#movies
   %thead
     %tr
+      %th Image
       %th Title
       %th ISBN
       %th Description
@@ -12,6 +13,7 @@
   %tbody
     - @listings.each do |listing|
       %tr
+        %td= image_tag listing.thumbnail.url(:thumb)
         %td= listing.title
         %td= listing.isbn
         %td= listing.description

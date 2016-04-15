@@ -1,7 +1,8 @@
 %h2 Create New Listing
 
-= form_tag "new", :method => :post do
+= form_tag "new", :method => :post, :multipart=> true do
 
+  = file_field :listing, :thumbnail
 
   = label :listing, :title, 'Title'
   = text_field :listing, :title
