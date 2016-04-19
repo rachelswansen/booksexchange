@@ -8,12 +8,14 @@
     
 <div class="row-fluid">
   <div class="col-lg-4 col-lg-offset-4 col-sm-10">
+    <form action="search" method="get">
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search by book title, author, or ISBN...">
+      <input name="term" type="text" class="form-control" placeholder="Search by book title, author, or ISBN...">
       <span class="input-group-btn">
-        <button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
       </span>
-    </div><!-- /input-group -->
+    </div>
+    </form><!-- /input-group -->
   </div><!-- /.col-lg-6 -->
 </div>
 </div>
