@@ -59,6 +59,10 @@ ActiveRecord::Schema.define(version: 20160418001547) do
     t.boolean  "is_admin"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "provider"
+    t.string   "access_token"
+    t.string   "uid"
+    t.string   "twitter_secret"
   end
 
 end
