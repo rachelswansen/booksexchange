@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20160415002132) do
-=======
 ActiveRecord::Schema.define(version: 20160418001547) do
->>>>>>> 811f1c0aab11fed685d6cefba792483b89fde960
 
   create_table "authors", force: :cascade do |t|
     t.string "fname"
@@ -77,10 +73,6 @@ ActiveRecord::Schema.define(version: 20160418001547) do
     t.boolean  "is_admin"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "provider"
-    t.string   "access_token"
-    t.string   "uid"
-    t.string   "twitter_secret"
   end
 
 end
