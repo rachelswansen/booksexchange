@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     
-    <link rel="stylesheet" href="main.css">
+    <%= stylesheet_link_tag "main" %>
     
     <!-- These stop FOUT, credit to brackets.io source -->
     <style type="text/css">
@@ -50,47 +50,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="container-fluid mainContent">
-<div class="row-fluid mainText text-center">
-    <h2>Looking for textbooks?</h2>
-    <h2>You've come to the right place.</h2>
-</div>
-    
-</br>
-    
-<div class="row-fluid">
-  <div class="col-lg-4 col-lg-offset-4 col-sm-10">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search by book title, author, or ISBN...">
-      <span class="input-group-btn">
-        <button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-      </span>
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-</div>
-</div>
-    
-<br/>
-<br/>
-
-<div class="container-fluid">
-    <div class="row-fluid text-center">
-        <div class="col-lg-4 col-xs-12 homeBottom1">
-            <img class="icon1" src="img/icon1.img" alt="Icon 1">
-            <p class="bottomText1">Lorem ipsum dolor sit amet, augue sed quisque magna aenean. Non dui libero aliquam vestibulum pellentesque, taciti accumsan, suspendisse scelerisque placerat aenean lacinia, wisi curabitur consectetuer laoreet rutrum velit eget, tellus cras odio donec turpis nulla dolor. Mauris sagittis quas ducimus, quisque blandit id nullam condimentum, venenatis convallis vestibulum, ante pede justo tincidunt vehicula facilisis. </p>
-        </div>
-        <div class="col-lg-4 col-xs-12 homeBottom2">
-            <img class="icon2" src="img/icon2.img" alt="Icon 2">
-            <p class="bottomText2">Lorem ipsum dolor sit amet, augue sed quisque magna aenean. Non dui libero aliquam vestibulum pellentesque, taciti accumsan, suspendisse scelerisque placerat aenean lacinia, wisi curabitur consectetuer laoreet rutrum velit eget, tellus cras odio donec turpis nulla dolor. Mauris sagittis quas ducimus, quisque blandit id nullam condimentum, venenatis convallis vestibulum, ante pede justo tincidunt vehicula facilisis. </p>
-        </div>
-        <div class="col-lg-4 col-xs-12 homeBottom3">
-            <img class="icon3" src="img/icon3.img" alt="Icon 3">
-            <p class="bottomText3">Lorem ipsum dolor sit amet, augue sed quisque magna aenean. Non dui libero aliquam vestibulum pellentesque, taciti accumsan, suspendisse scelerisque placerat aenean lacinia, wisi curabitur consectetuer laoreet rutrum velit eget, tellus cras odio donec turpis nulla dolor. Mauris sagittis quas ducimus, quisque blandit id nullam condimentum, venenatis convallis vestibulum, ante pede justo tincidunt vehicula facilisis. </p>
-        </div>
-    </div>
-</div>
-
-<br/>
+<%= yield %>
 
 <footer class="footer">
       <div class="container col-lg-4 col-lg-offset-4 text-center">
