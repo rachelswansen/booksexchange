@@ -46,4 +46,9 @@ group :development do
 end
 
 gem 'haml'
+<<<<<<< HEAD
+
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+=======
 gem 'faker'
+>>>>>>> 811f1c0aab11fed685d6cefba792483b89fde960
