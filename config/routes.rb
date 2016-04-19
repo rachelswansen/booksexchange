@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  get 'search' => 'search#results'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+<<<<<<< HEAD
   root 'welcome#index'
   get 'welcome/index'
   
@@ -10,6 +13,10 @@ Rails.application.routes.draw do
   get 'listings' => 'listings#index'
   get 'listings/new' => 'listings#new'
   post 'listings/new' => 'listings#create'
+=======
+  root 'welcome#booksexchangehome'
+  get 'welcome/booksexchangehome'
+>>>>>>> 811f1c0aab11fed685d6cefba792483b89fde960
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
