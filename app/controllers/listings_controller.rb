@@ -5,8 +5,18 @@ class ListingsController < ApplicationController
     end
     
     def create
-        @listing = Listing.create!(listing_params)
-        redirect_to '/listings'
+        #@listing = Listing.create!(listing_params)
+        
+        @sell_listing = SellListing.new
+        @sell_listing.user = current_user
+        @sell_listing.book = Book.where("isbn = ?", listing_params[:isbn]).first
+        @sell_listing.price = listing_params[:price]
+        @sell_listing.is_hardcover = listing_params[:is_hardcover]
+        @sell_listing.notes = listing_params[:description]
+        
+        @sell_listing.save
+
+        redirect_to listing_path(@sell_listing)
     end
     
 

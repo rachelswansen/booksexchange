@@ -1,24 +1,32 @@
 %h2 Create New Listing
 
-= form_tag "new", :method => :post, :multipart=> true do
-
-  = file_field :listing, :thumbnail
-
-  = label :listing, :title, 'Title'
-  = text_field :listing, :title
-  
-  = label :listing, :isbn, 'ISBN'
-  = text_field :listing, :isbn
-  
-  = label :listing, :description, 'Description'
-  = text_field :listing, :description
-  
-  = label :listing, :price, 'Price'
-  = number_field :listing, :price
- 
-  = label :listing, :is_hardcover, 'Hardcover'
-  = select :listing, :is_hardcover, ['true','false']
- 
-  = submit_tag 'Add Listing'
-  
+.container
+  = form_tag "new", :method => :post, :multipart=> true do
+    .row
+      .col-xs-12.col-sm-4.form-group
+        = label :listing, :isbn, 'ISBN'
+        = text_field :listing, :isbn, :class => 'form-control'
+        
+      .col-xs-6.col-sm-4.form-group
+        = label :listing, :price, 'Price'
+        = number_field :listing, :price, :class => 'form-control'
+        
+      .col-xs-6.col-sm-4.form-group
+        = label :listing, :is_hardcover, 'Type'
+        %select#is_hardcover{:class => "form-control"}
+          %option{:value => 'true'}= "Hardcover"
+          %option{:value => 'false'}= "Paperback"
+        
+    .row
+      .col-xs-12.form-group
+        = label :listing, :description, 'Additional Information'
+        = text_area :listing, :description, :class => 'form-control'
+        
+        = label :listing, :thumbnail
+        = file_field :listing, :thumbnail, :class => 'form-control'
+        
+    .row
+      .col-xs-12.form-group
+        = submit_tag 'Add Listing', :class => 'btn btn-primary'
+    
   
