@@ -2,6 +2,10 @@
     background-color: #480059 !important;
 }
 
+.blackBack {
+    background-color: #212121 !important;
+}
+
 .navbar-default .navbar-brand {
     color: #FFFFFF !important;
 }
@@ -20,4 +24,20 @@
 
 .navbar-default .navbar-nav>.active>a:hover {
     background-color: #212121;
+}
+
+#footer {
+  position: relative;
+  margin-top: -180px; /* negative value of footer height */
+  height: 180px;
+  clear:both;
+} 
+
+.bottomText {
+    padding: 25px;
+}
+
+body {
+    background-color: #212121 !important;
+    color: #FFFFFF !important;
 }
