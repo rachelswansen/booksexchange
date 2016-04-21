@@ -10,7 +10,7 @@ class ListingsController < ApplicationController
     end
     
     def show
-        @listing = Listing..find(params[:id])
+        @listing = SellListing.find(params[:id])
     end
 
     def new
