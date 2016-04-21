@@ -6,12 +6,20 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
-  get 'welcome/index'
-  
+  get 'about' => 'welcome#about'
   
   get 'listings' => 'listings#index'
   get 'listings/new' => 'listings#new'
   post 'listings/new' => 'listings#create'
+  get 'listings/:id' => 'listings#show', as: 'listing'
+  
+  
+  get 'auth/:provider/callback' => 'sessions#create'
+  get 'logout' => 'sessions#destroy'
+  get 'auth/failure' => 'sessions#failure'
+  get 'users/index' => 'users#index'
+  
+  get 'users/new'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -61,4 +69,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
 end
