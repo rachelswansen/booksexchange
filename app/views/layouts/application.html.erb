@@ -43,7 +43,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
-            <li><%= "Welcome, #{current_user.name}!!!!!!! :D =^..^=" %></li>
+            <li><p class="navbar-text"><%= "Welcome, #{current_user.name}!!!!!!! :D =^..^=" %></p></li>
             <li><%= link_to 'Log Out', logout_path %></li>
           <% else %>
             <li><%= link_to 'Log in with Twitter', '/auth/twitter' %></li>
