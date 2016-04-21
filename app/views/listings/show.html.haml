@@ -9,9 +9,13 @@
   %li
     ISBN:
     = @listing.book.isbn
-  %li
-    Description:
+  %li 
+    Book Summary:
     = @listing.book.description
+    
+  %li
+    Additional Information:
+    = @listing.notes
   %li
     Price:
     = @listing.price
