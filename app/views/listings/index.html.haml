@@ -1,0 +1,27 @@
+-#  This file is app/views/listings/index.html.haml
+
+
+
+
+%h1 All Listings
+ 
+%table#movies
+  %thead
+    %tr
+      %th Image
+      %th Title
+      %th ISBN
+      %th Description
+      %th Price
+      %th Hardcover
+  %tbody
+    - @listings.each do |listing|
+      %tr
+        %td= image_tag listing.thumbnail.url(:thumb)
+        %td= listing.title
+        %td= listing.isbn
+        %td= listing.description
+        %td= listing.price
+        %td= listing.is_hardcover
+
+= link_to 'Add new listing', "listings/new"

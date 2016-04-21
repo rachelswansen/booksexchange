@@ -1,23 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+    <meta charset="utf-8"/>
+    <title>Books Exchange</title>
+    <meta name="description" content>
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    
+    <%= stylesheet_link_tag "main" %>
+    
+    <!-- These stop FOUT, credit to brackets.io source -->
+    <style type="text/css">
+        .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4,
+        .wf-loading h5, .wf-loading h6, .wf-loading p, .wf-loading a {
+            visibility: hidden;
+        }
+    </style>
 </head>
-<body>
-<div id="login">
-  <% if current_user %>
-    <p class="welcome"><%= "Welcome, #{current_user.name}!!!!!!! :D =^..^=" %></p>
-    <%= link_to 'Log Out', logout_path %>
-  <% else %>
-    <p class="login">
-      <%= link_to 'Log in with your Twitter account', '/auth/twitter' %>
-    </p>
-  <% end %>
-</div>
-<%= yield %>
 
+<body>
+  <nav class="navbar navbar-default purpleBack">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Books Exchange</a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <% if current_user %>
+            <li><%= "Welcome, #{current_user.name}!!!!!!! :D =^..^=" %></li>
+            <li><%= link_to 'Log Out', logout_path %></li>
+          <% else %>
+            <li><%= link_to 'Log in with Twitter', '/auth/twitter' %></li>
+            <!--<li><a href="register.html">Register</a></li>-->
+          <% end %>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <%= yield %>
+
+  <footer class="footer">
+        <div class="container col-lg-4 col-lg-offset-4 text-center">
+          <p class="text-muted">Place sticky footer content here.</p>
+        </div>
+  </footer>    
 </body>
 </html>

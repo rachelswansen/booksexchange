@@ -49,3 +49,6 @@ gem 'haml'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
+
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem 'faker'
