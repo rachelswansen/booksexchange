@@ -1,18 +1,20 @@
 %h1 Search Results
 
-%table#movies
-  %thead
-    %tr
-      %th Book Title
-      %th Book ISBN
-      %th Price
-      %th More Info
-      %th Contact
-  %tbody
-    - @sell_listings.each do |listing|
+.table-responsive
+  %table.table#movies
+    %thead
       %tr
-        %td= listing.book.title
-        %td= listing.book.isbn
-        %td= listing.price
-        %td= listing.notes
-        %td= listing.user.email
+        %th Book Title
+        %th Book ISBN
+        %th Price
+        %th More Info
+        %th Contact
+    %tbody
+      - @sell_listings.each do |listing|
+        %tr
+          %td= listing.book.title
+          %td= listing.book.isbn
+          %td= listing.price
+          %td= listing.notes
+          %td= listing.user.email
+          %td= link_to "More about #{listing.book.title}", listing_path(listing)

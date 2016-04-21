@@ -19,6 +19,9 @@ class ListingsController < ApplicationController
         redirect_to listing_path(@sell_listing)
     end
     
+    def show
+        @listing = SellListing.find(params[:id])
+    end
 
     def new
        # @listing = Listing.new

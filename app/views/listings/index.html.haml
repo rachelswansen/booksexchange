@@ -23,5 +23,7 @@
         %td= listing.description
         %td= listing.price
         %td= listing.is_hardcover
+        
+        %td= link_to "More about #{listing.title}", listing_path(listing)
 
 = link_to 'Add new listing', "listings/new"

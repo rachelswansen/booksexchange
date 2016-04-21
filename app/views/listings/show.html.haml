@@ -1,0 +1,21 @@
+%h2 Details about #{@listing.book.title}
+
+%ul#details
+  %li
+    = image_tag "http://lorempixel.com/400/200/cats/"
+  %li
+    Title:
+    = @listing.book.title
+  %li
+    ISBN:
+    = @listing.book.isbn
+  %li
+    Description:
+    = @listing.book.description
+  %li
+    Price:
+    = @listing.price
+ 
+     
+     
+

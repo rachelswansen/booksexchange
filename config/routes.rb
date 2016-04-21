@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'listings' => 'listings#index'
   get 'listings/new' => 'listings#new'
   post 'listings/new' => 'listings#create'
+  get 'listings/:id' => 'listings#show', as: 'listing'
   
   
   get 'auth/:provider/callback' => 'sessions#create'
